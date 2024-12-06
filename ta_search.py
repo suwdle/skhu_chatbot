@@ -12,6 +12,7 @@ load_dotenv()
 
 # SERPAPI API 키 가져오기
 os.environ["SERPAPI_API_KEY"] = os.getenv("SERPAPI_API_KEY")
+os.environ["Groq_API_KEY"] = os.getenv("Groq_API_KEY")
 
 ########## 1. 도구를 정의합니다 ##########
 
@@ -31,7 +32,7 @@ model = ChatGroq(
     model="gemma2-9b-it",  # 모델 이름
     temperature=0.7,       # 생성 온도
     max_tokens=300,        # 최대 토큰 수
-    api_key='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'  # API 키를 .env에서 불러오기
+    api_key='Groq_API_KEY'  # API 키를 .env에서 불러오기
 )
 
 ########## 3. Prompt 를 정의합니다 ##########
